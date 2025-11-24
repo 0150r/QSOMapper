@@ -66,7 +66,7 @@ def plot_path(my_lat, my_lon, lat, lon, ax):
     lonlats = geod.npts(my_lon, my_lat, lon, lat, PATH_POINTS)
     lons, lats = zip(*lonlats)
 
-    #plot the path with a green line at 25% alpha
+    #plot the path
     ax.plot([my_lon] + list(lons) + [lon], 
             [my_lat] + list(lats) + [lat], 
             'b-', linewidth=1, transform=ccrs.Geodetic(), alpha=0.1)
